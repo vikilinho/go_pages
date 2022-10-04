@@ -14,22 +14,25 @@ class _SplashState extends State<Splash> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-          child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        // ignore: prefer_const_literals_to_create_immutables
-        children: [
-          const Text(
-            "Welcome to the Pages login to proceed",
-            style: TextStyle(
-                color: Colors.black,
-                fontSize: 25.0,
-                fontWeight: FontWeight.bold),
-          ),
-          ElevatedButton(
-              onPressed: (() => context.go('/LoginPage')),
-              child: const Text("Login"))
-        ],
+          child: Padding(
+        padding: const EdgeInsets.all(12.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+
+          // ignore: prefer_const_literals_to_create_immutables
+          children: [
+            const Text(
+              "Welcome to the Pages login to proceed",
+              style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 25.0,
+                  fontWeight: FontWeight.bold),
+            ),
+            ElevatedButton(
+                onPressed: (() => context.go('/LoginPage')),
+                child: const Text("Login"))
+          ],
+        ),
       )),
     );
   }

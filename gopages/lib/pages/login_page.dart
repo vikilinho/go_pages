@@ -13,32 +13,35 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-          child: Column(
-        // ignore: prefer_const_literals_to_create_immutables
-        children: [
-          const Text(
-            "Welcome to the login Page.",
-            style: TextStyle(
-                color: Colors.black,
-                fontSize: 25.0,
-                fontWeight: FontWeight.bold),
-          ),
-          TextField(
-            decoration: const InputDecoration(
-              hintText: "dvicxy@gmail.com",
-              labelText: "Email",
+          child: Padding(
+        padding: const EdgeInsets.all(12.0),
+        child: Column(
+          // ignore: prefer_const_literals_to_create_immutables
+          children: [
+            const Text(
+              "Welcome to the login Page.",
+              style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 25.0,
+                  fontWeight: FontWeight.bold),
             ),
-          ),
-          TextField(
-            decoration: const InputDecoration(
-              hintText: "********",
-              labelText: "Password",
+            TextField(
+              decoration: const InputDecoration(
+                hintText: "dvicxy@gmail.com",
+                labelText: "Email",
+              ),
             ),
-          ),
-          ElevatedButton(
-              onPressed: (() => context.go('/HomePage')),
-              child: const Text("Login"))
-        ],
+            TextField(
+              decoration: const InputDecoration(
+                hintText: "********",
+                labelText: "Password",
+              ),
+            ),
+            ElevatedButton(
+                onPressed: (() => context.go('/HomePage')),
+                child: const Text("Login"))
+          ],
+        ),
       )),
     );
   }

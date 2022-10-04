@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:gopages/pages/homepage.dart';
 import 'package:gopages/pages/login_page.dart';
 import 'package:gopages/pages/splash_page.dart';
 
@@ -23,15 +24,21 @@ class MyApp extends StatelessWidget {
   final GoRouter _router = GoRouter(
     routes: <GoRoute>[
       GoRoute(
-        path: '/splash',
+        path: '/SplashPage',
         builder: (BuildContext context, GoRouterState state) {
           return Splash();
         },
       ),
       GoRoute(
-        path: '/login',
+        path: '/LoginPage',
         builder: (BuildContext context, GoRouterState state) {
           return LoginPage();
+        },
+      ),
+      GoRoute(
+        path: '/HomePage',
+        builder: (BuildContext context, GoRouterState state) {
+          return HomePage();
         },
       ),
     ],

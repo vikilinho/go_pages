@@ -25,7 +25,7 @@ class _SplashState extends State<Splash> {
                 fontWeight: FontWeight.bold),
           ),
           ElevatedButton(
-              onPressed: (() => context.go('/login')),
+              onPressed: (() => context.go('/LoginPage')),
               child: const Text("Login"))
         ],
       )),

@@ -36,7 +36,7 @@ class _LoginPageState extends State<LoginPage> {
             ),
           ),
           ElevatedButton(
-              onPressed: (() => context.go('/homepage')),
+              onPressed: (() => context.go('/HomePage')),
               child: const Text("Login"))
         ],
       )),

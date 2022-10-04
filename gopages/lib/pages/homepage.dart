@@ -24,7 +24,7 @@ class _HomePageState extends State<HomePage> {
                 fontWeight: FontWeight.bold),
           ),
           ElevatedButton(
-              onPressed: (() => context.go('/splash')),
+              onPressed: (() => context.go('/SplashPage')),
               child: const Text("Log Out"))
         ],
       )),

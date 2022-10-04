@@ -16,31 +16,32 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
         title: 'Flutter Go Router',
+        routerConfig: _router,
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ));
   }
-
-  final GoRouter _router = GoRouter(
-    routes: <GoRoute>[
-      GoRoute(
-        path: '/SplashPage',
-        builder: (BuildContext context, GoRouterState state) {
-          return Splash();
-        },
-      ),
-      GoRoute(
-        path: '/LoginPage',
-        builder: (BuildContext context, GoRouterState state) {
-          return LoginPage();
-        },
-      ),
-      GoRoute(
-        path: '/HomePage',
-        builder: (BuildContext context, GoRouterState state) {
-          return HomePage();
-        },
-      ),
-    ],
-  );
 }
+
+final GoRouter _router = GoRouter(
+  routes: <GoRoute>[
+    GoRoute(
+      path: '/SplashPage',
+      builder: (BuildContext context, GoRouterState state) {
+        return Splash();
+      },
+    ),
+    GoRoute(
+      path: '/LoginPage',
+      builder: (BuildContext context, GoRouterState state) {
+        return LoginPage();
+      },
+    ),
+    GoRoute(
+      path: '/HomePage',
+      builder: (BuildContext context, GoRouterState state) {
+        return HomePage();
+      },
+    ),
+  ],
+);

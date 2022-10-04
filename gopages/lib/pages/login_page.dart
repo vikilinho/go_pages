@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 class LoginPage extends StatefulWidget {
-  LoginPage({Key? key}) : super(key: key);
+  const LoginPage({Key? key}) : super(key: key);
 
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -25,14 +25,14 @@ class _LoginPageState extends State<LoginPage> {
                   fontSize: 25.0,
                   fontWeight: FontWeight.bold),
             ),
-            TextField(
-              decoration: const InputDecoration(
+            const TextField(
+              decoration: InputDecoration(
                 hintText: "dvicxy@gmail.com",
                 labelText: "Email",
               ),
             ),
-            TextField(
-              decoration: const InputDecoration(
+            const TextField(
+              decoration: InputDecoration(
                 hintText: "********",
                 labelText: "Password",
               ),

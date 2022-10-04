@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:gopages/pages/assesory/constants.dart';
 
 class Splash extends StatefulWidget {
-  Splash({Key? key}) : super(key: key);
+  const Splash({Key? key}) : super(key: key);
 
   @override
   State<Splash> createState() => _SplashState();

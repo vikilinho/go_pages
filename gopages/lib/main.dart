@@ -15,19 +15,19 @@ class MyApp extends StatelessWidget {
       GoRoute(
         path: '/',
         builder: (BuildContext context, GoRouterState state) {
-          return Splash();
+          return const Splash();
         },
       ),
       GoRoute(
         path: '/LoginPage',
         builder: (BuildContext context, GoRouterState state) {
-          return LoginPage();
+          return const LoginPage();
         },
       ),
       GoRoute(
         path: '/HomePage',
         builder: (BuildContext context, GoRouterState state) {
-          return HomePage();
+          return const HomePage();
         },
       ),
     ],
@@ -36,6 +36,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
+        debugShowCheckedModeBanner: false,
         title: 'Flutter Go Router',
         routerConfig: _router,
         theme: ThemeData(

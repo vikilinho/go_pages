@@ -22,7 +22,7 @@ class _SplashState extends State<Splash> {
           // ignore: prefer_const_literals_to_create_immutables
           children: [
             const Text(
-              "Welcome to the Pages login to proceed",
+              "Welcome to the Pages. login to proceed",
               style: TextStyle(
                   color: Colors.black,
                   fontSize: 25.0,

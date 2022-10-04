@@ -10,7 +10,28 @@ void main() {
 
 class MyApp extends StatelessWidget {
   MyApp({super.key});
-
+  final GoRouter _router = GoRouter(
+    routes: <GoRoute>[
+      GoRoute(
+        path: '/',
+        builder: (BuildContext context, GoRouterState state) {
+          return Splash();
+        },
+      ),
+      GoRoute(
+        path: '/LoginPage',
+        builder: (BuildContext context, GoRouterState state) {
+          return LoginPage();
+        },
+      ),
+      GoRoute(
+        path: '/HomePage',
+        builder: (BuildContext context, GoRouterState state) {
+          return HomePage();
+        },
+      ),
+    ],
+  );
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -22,26 +43,3 @@ class MyApp extends StatelessWidget {
         ));
   }
 }
-
-final GoRouter _router = GoRouter(
-  routes: <GoRoute>[
-    GoRoute(
-      path: '/SplashPage',
-      builder: (BuildContext context, GoRouterState state) {
-        return Splash();
-      },
-    ),
-    GoRoute(
-      path: '/LoginPage',
-      builder: (BuildContext context, GoRouterState state) {
-        return LoginPage();
-      },
-    ),
-    GoRoute(
-      path: '/HomePage',
-      builder: (BuildContext context, GoRouterState state) {
-        return HomePage();
-      },
-    ),
-  ],
-);

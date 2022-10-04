@@ -15,6 +15,8 @@ class _SplashState extends State<Splash> {
     return Scaffold(
       body: SafeArea(
           child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         // ignore: prefer_const_literals_to_create_immutables
         children: [
           const Text(
